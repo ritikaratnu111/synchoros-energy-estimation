@@ -57,40 +57,11 @@ NoC connectivity (conceptual)
    [3,0] -- [3,1] -- [3,2] -- [3,3]
 ```
 
-## Testbench behavior (ASCII overview)
-
-The main testbench here is `rtl/tb/tb_hycube_new.sv`. It programs HyCUBE by replaying address/data traces for **DM** and **CM**, then asserts `scan_start_exec` to start execution.
-
-```text
-tb (tb_hycube_new.sv)
-  |
-  +--> drives clk (10ns period) and reset
-  |
-  +--> instantiates DUT: hycube uut(...)
-  |
-  +--> uses tri-state "data" bus:
-        data = (~read_write) ? data_in : Z
-
-Timeline / intent
+## Testbench
 
   1) Initialize + reset release
-     - reset=1 for a short time, then reset=0
-     - chip_en=1, read_write=0 (testbench drives data bus)
-
-  2) Program Data Memory (DM) using SRAM traces
-     for num_inst = 0 .. NUM_DATA-1:
-       a) Load next 16b address word  from ../rtl/SRAM_addr.trc  -> data_in
-          drive: scan_data_or_addr=1 (address), data_addr_valid=2'b11, read_write=0
-       b) Load next 16b data word     from ../rtl/SRAM_data.trc  -> data_in
-          drive: scan_data_or_addr=0 (data),    data_addr_valid=2'b11, read_write=0
-
-  3) Program Control Memory (CM) using CM traces
-     for num_inst = 0 .. NUM_INST-1:
-       a) Load next 16b address word  from ../rtl/CM_addr.trc    -> data_in
-          drive address phase (scan_data_or_addr=1)
-       b) Load next 16b data word     from ../rtl/CM_data.trc    -> data_in
-          drive data phase    (scan_data_or_addr=0)
-
+  2) Program Data Memory (DM) 
+  3) Program Control Memory (CM) 
   4) Start execution
      - wait a couple cycles
      - set scan_start_exec = 1
