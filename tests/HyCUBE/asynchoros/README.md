@@ -5,10 +5,9 @@ This folder includes RTL and testbench collateral derived from the HyCUBE projec
 
 This copy is included to support the **HyCUBE asynchoros testcase** in this repository; minor local edits may exist for integration/reproducibility.
 
-## RTL design (ASCII overview)
+## RTL design 
 
-Notes:
-- The full chip wrapper exists as `chip_with_pad` → `chip` → `hycube`, but the provided testbench instantiates `hycube` directly.
+- The full chip wrapper exists as `chip_with_pad` → `chip` → `hycube`, but we instantiate `hycube` directly.
 - The HyCUBE fabric inside `hycube` is a \(4 \times 4\) tile array (`NUM_TILES_X = NUM_TILES_Y = 4`).
 
 ```text
@@ -46,7 +45,7 @@ Core fabric (hycube.sv)
                   |
                   +--> NoC links (N/E/S/W) connecting neighboring tiles
 
-NoC connectivity (conceptual)
+NoC connectivity 
 
    [0,0] -- [0,1] -- [0,2] -- [0,3]
      |        |        |        |
