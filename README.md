@@ -2,7 +2,7 @@
 
 Artifacts (paper + code + testcases) for **Synchoros** energy characterization/estimation of CGRA fabrics, with state-of-the-art (SOTA) comparisons.
 
-## Repository layout
+## Overview
 
 - **`src/`**  : Python code for running characterization/estimation flows.
 
