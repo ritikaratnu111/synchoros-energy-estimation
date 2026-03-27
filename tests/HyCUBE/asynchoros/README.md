@@ -14,14 +14,14 @@ Top-level wrappers (available in rtl/rtl/)
 
   chip_with_pad
       |
-      +--> chip  -------------------------------------------------------------+
-            |                                                                 |
-            +--> spi_all  (programming interface / drives scan_data path)     |
-            |                                                                 |
-            +--> clkGen_top_blmux (clock generation)                          |
-            |                                                                 |
-            +--> hycube  (core fabric)                                        |
-                                                                               \
+      +--> chip  
+            |                                                                 
+            +--> spi_all  (programming interface / drives scan_data path)     
+            |                                                                 
+            +--> clkGen_top_blmux (clock generation)                          
+            |                                                                 
+            +--> hycube  (core fabric)                                        
+                                                                              
 Core fabric (hycube.sv)
 
   hycube
