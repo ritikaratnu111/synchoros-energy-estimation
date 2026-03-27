@@ -28,8 +28,7 @@ Core fabric (hycube.sv)
     |
     +--> Control-memory macros (per tile)   TS6N40LPA24X64M2F (CM, 64-bit wide)
     |
-    +--> Data-memory macros (subset tiles)  TSDN40LPA512X32M4F (DM, 32-bit wide)
-    |       - DM banks are attached to specific tiles (see is_dm_tile logic)
+    +--> Data-memory macros (leftmost tiles)  TSDN40LPA512X32M4F (DM, 32-bit wide)
     |
     +--> 4x4 Tile Array
           (Tile[i][j] for i in Y, j in X)
