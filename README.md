@@ -20,7 +20,7 @@ Artifacts (paper + code + testcases) for **Synchoros** energy characterization/e
 - **`paper/`**: LaTeX sources for the paper.
 
 
-## Quickstart (HyCUBE example)
+## Quickstart
 ```bash
 cd tests/HyCUBE/synchoros
 python3 ../../../src/PowerCharacterizer.py
