@@ -8,8 +8,8 @@ Artifacts (paper + code + testcases) for **Synchoros** energy characterization/e
 
 
 - **`tests/`**: Testcases for the following CGRAs 
-  - `ADRES/`, : B. Mei, et al., “ADRES: An architecture with tightly coupled VLIW processor and coarse-grained reconfigurable matrix,” in FPL’03. 
-  - `DRRA/`,  : 
+  - `ADRES/`: B. Mei, S. Vernalde, D. Verkest, H. De Man, and R. Lauwereins, “ADRES: An architecture with tightly coupled VLIW processor and coarse-grained reconfigurable matrix,” in *Field Programmable Logic and Application (FPL 2003)*, LNCS 2778, Springer, 2003, pp. 61–70. [Link](https://link.springer.com/chapter/10.1007/978-3-540-45234-8_7)
+  - `DRRA/` : 
   - `HyCUBE/` : https://www.comp.nus.edu.sg/~tulika/DAC17.pdf 
 
 
