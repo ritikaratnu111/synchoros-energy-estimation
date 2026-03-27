@@ -1,0 +1,1489 @@
+library (dummy_lib) {
+    delay_model : table_lookup;
+    revision : 1.0;
+    technology (cmos);
+
+    wire_load("default") {
+        resistance : 0.0;
+        capacitance : 0.0;
+        area : 0.0;
+    }
+
+    cell (TS6N40LPA24X64M2F) {
+        area : 0;
+        cell_leakage_power : 0.0;
+
+        pin (AA[0]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AA[1]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AA[2]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AA[3]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AA[4]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (D[0]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[1]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[2]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[3]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[4]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[5]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[6]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[7]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[8]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[9]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[10]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[11]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[12]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[13]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[14]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[15]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[16]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[17]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[18]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[19]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[20]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[21]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[22]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[23]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[24]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[25]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[26]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[27]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[28]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[29]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[30]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[31]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[32]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[33]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[34]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[35]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[36]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[37]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[38]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[39]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[40]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[41]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[42]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[43]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[44]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[45]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[46]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[47]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[48]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[49]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[50]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[51]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[52]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[53]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[54]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[55]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[56]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[57]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[58]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[59]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[60]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[61]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[62]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (D[63]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (BWEB[0]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[1]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[2]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[3]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[4]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[5]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[6]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[7]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[8]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[9]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[10]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[11]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[12]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[13]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[14]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[15]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[16]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[17]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[18]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[19]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[20]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[21]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[22]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[23]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[24]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[25]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[26]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[27]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[28]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[29]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[30]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[31]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[32]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[33]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[34]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[35]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[36]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[37]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[38]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[39]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[40]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[41]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[42]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[43]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[44]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[45]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[46]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[47]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[48]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[49]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[50]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[51]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[52]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[53]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[54]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[55]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[56]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[57]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[58]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[59]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[60]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[61]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[62]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEB[63]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (WEB) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (CLKW) {
+            direction : input;
+            capacitance : 0.001;
+            clock : true;
+        }
+
+        pin (AB[0]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AB[1]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AB[2]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AB[3]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AB[4]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (REB) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (CLKR) {
+            direction : input;
+            capacitance : 0.001;
+            clock : true;
+        }
+        pin (PD) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (AMA[0]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AMA[1]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AMA[2]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AMA[3]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AMA[4]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (DM[0]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[1]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[2]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[3]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[4]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[5]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[6]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[7]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[8]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[9]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[10]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[11]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[12]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[13]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[14]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[15]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[16]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[17]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[18]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[19]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[20]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[21]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[22]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[23]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[24]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[25]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[26]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[27]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[28]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[29]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[30]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[31]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[32]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[33]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[34]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[35]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[36]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[37]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[38]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[39]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[40]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[41]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[42]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[43]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[44]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[45]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[46]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[47]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[48]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[49]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[50]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[51]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[52]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[53]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[54]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[55]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[56]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[57]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[58]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[59]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[60]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[61]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[62]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (DM[63]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (BWEBM[0]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[1]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[2]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[3]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[4]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[5]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[6]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[7]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[8]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[9]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[10]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[11]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[12]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[13]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[14]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[15]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[16]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[17]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[18]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[19]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[20]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[21]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[22]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[23]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[24]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[25]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[26]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[27]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[28]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[29]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[30]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[31]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[32]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[33]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[34]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[35]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[36]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[37]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[38]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[39]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[40]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[41]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[42]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[43]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[44]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[45]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[46]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[47]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[48]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[49]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[50]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[51]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[52]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[53]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[54]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[55]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[56]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[57]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[58]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[59]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[60]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[61]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[62]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BWEBM[63]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (WEBM) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (AMB[0]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AMB[1]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AMB[2]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AMB[3]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (AMB[4]) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (REBM) {
+            direction : input;
+            capacitance : 0.001;
+        }
+        pin (BIST) {
+            direction : input;
+            capacitance : 0.001;
+        }
+
+        pin (Q[0]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[1]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[2]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[3]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[4]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[5]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[6]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[7]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[8]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[9]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[10]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[11]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[12]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[13]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[14]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[15]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[16]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[17]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[18]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[19]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[20]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[21]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[22]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[23]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[24]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[25]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[26]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[27]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[28]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[29]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[30]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[31]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[32]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[33]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[34]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[35]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[36]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[37]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[38]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[39]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[40]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[41]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[42]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[43]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[44]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[45]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[46]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[47]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[48]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[49]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[50]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[51]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[52]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[53]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[54]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[55]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[56]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[57]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[58]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[59]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[60]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[61]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[62]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+        pin (Q[63]) {
+            direction : output;
+            function : "unknown";
+            max_capacitance : 0.05;
+        }
+
+    }
+}
+

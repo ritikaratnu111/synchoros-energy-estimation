@@ -1,0 +1,23 @@
+[
+    {
+    "Name":         "control_reg_data",
+    "Description":  "Controller",
+    "NetlistString":[
+                    "control_reg_data"
+                    ] 
+    },
+    {
+    "Name":         "sram",
+    "Description":  "Local scratchpad",
+    "NetlistString":[
+                    "sram"
+                    ] 
+    },
+    {
+    "Name":         "data_register",
+    "Description":  "Data Register",
+    "NetlistString":[
+                    "data_register"
+                    ] 
+    }
+]

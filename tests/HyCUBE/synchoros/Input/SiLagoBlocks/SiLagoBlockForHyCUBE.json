@@ -1,0 +1,127 @@
+{
+"Name":             "HyCUBESiLagoBlock",
+"ValidNeighborConfigurations":[
+                {
+                "Id":           "OrthogonalFourWay",
+                "Description":  "Reference component with up to four orthogonal neighbors",
+                "Neighbours":   [
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"North"
+                                },
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"South"
+                                },
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"East"
+                                },
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"West"
+                                }
+                                ], 
+                "Operations":   "Operations/OperationsOrthogonalFourWay.json"
+                },
+                {
+                "Id":           "CornerBottomLeft",
+                "Description":  "Reference component with up to four orthogonal neighbors",
+                "Neighbours":   [
+                                 {
+                                 "Name":     "HyCUBESiLagoBlock",
+                                 "Alignment":"North"
+                                 },
+                                 {
+                                 "Name":     "HyCUBESiLagoBlock",
+                                 "Alignment":"East"
+                                 }
+                                ], 
+                "Operations":   "Operations/OperationsCornerBottomLeft.json"
+                },
+                {
+                "Id":           "CornerTopLeft",
+                "Description":  "Reference component with up to four orthogonal neighbors",
+                "Neighbours":   [
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"South"
+                                },
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"East"
+                                }
+                                ], 
+                "Operations":   "Operations/OperationsCornerTopLeft.json"
+                },
+                {
+                "Id":           "CornerTopRight",
+                "Description":  "Reference component with up to four orthogonal neighbors",
+                "Neighbours":   [
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"South"
+                                },
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"West"
+                                }
+                                ], 
+                "Operations":   "Operations/OperationsCornerTopRight.json"
+                },
+                {
+                "Id":           "CornerBottomRight",
+                "Description":  "Reference component with up to four orthogonal neighbors",
+                "Neighbours":   [
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"North"
+                                },
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"West"
+                                }
+                                ], 
+                "Operations":   "Operations/OperationsCornerBottomRight.json"
+                },
+                {
+                "Id":           "ThreeWayTop",
+                "Description":  "Reference component with up to four orthogonal neighbors",
+                "Neighbours":   [
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"South"
+                                },
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"West"
+                                },    {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"East"
+                                }
+                                ], 
+                "Operations":   "Operations/OperationsThreeWayTop.json"
+                },
+                {
+                "Id":           "ThreeWayBottom",
+                "Description":  "Reference component with up to four orthogonal neighbors",
+                "Neighbours":   [
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"North"
+                                },
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"West"
+                                },
+                                {
+                                "Name":     "HyCUBESiLagoBlock",
+                                "Alignment":"East"
+                                }
+                                ], 
+                "Operations":   "/Operations/OperationsThreeWayBottom.json"
+                }
+                ],
+"Resources":        "Resources/ResourcesHyCUBE.json", 
+"DesignBasePath":   "/media/storage1/ritika/date/hycube/SynchorosHyCUBE/Input/"
+}

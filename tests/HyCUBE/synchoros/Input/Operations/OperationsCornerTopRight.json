@@ -1,0 +1,146 @@
+[
+  {
+    "Name": "loop",
+    "Cycles": "1",
+    "Resources": [
+      {
+        "Name": "control_reg_data",
+        "Cycles": "1"
+      },
+      {
+        "Name": "sram",
+        "Cycles": "1"
+      },
+      {
+        "Name": "data_register",
+        "Cycles": "1"
+      }
+    ]
+  },
+  {
+    "Name": "load",
+    "Cycles": "1",
+    "Resources": [
+      {
+        "Name": "control_reg_data",
+        "Cycles": "1"
+      },
+      {
+        "Name": "sram",
+        "Cycles": "1"
+      },
+      {
+        "Name": "data_register",
+        "Cycles": "1"
+      }
+    ]
+  },
+  {
+    "Name": "store",
+    "Cycles": "1",
+    "Resources": [
+      {
+        "Name": "control_reg_data",
+        "Cycles": "1"
+      },
+      {
+        "Name": "sram",
+        "Cycles": "1"
+      },
+      {
+        "Name": "data_register",
+        "Cycles": "1"
+      }
+    ]
+  },
+  {
+    "Name": "update_east",
+    "Cycles": "1",
+    "Resources": [
+      {
+        "Name": "control_reg_data",
+        "Cycles": "1"
+      },
+      {
+        "Name": "sram",
+        "Cycles": "1"
+      },
+      {
+        "Name": "data_register",
+        "Cycles": "1"
+      }
+    ]
+  },
+  {
+    "Name": "read_west",
+    "Cycles": "1",
+    "Resources": [
+      {
+        "Name": "control_reg_data",
+        "Cycles": "1"
+      },
+      {
+        "Name": "sram",
+        "Cycles": "1"
+      },
+      {
+        "Name": "data_register",
+        "Cycles": "1"
+      }
+    ]
+  },
+  {
+    "Name": "update_treg",
+    "Cycles": "1",
+    "Resources": [
+      {
+        "Name": "control_reg_data",
+        "Cycles": "1"
+      },
+      {
+        "Name": "sram",
+        "Cycles": "1"
+      },
+      {
+        "Name": "data_register",
+        "Cycles": "1"
+      }
+    ]
+  },
+  {
+    "Name": "nop",
+    "Cycles": "1",
+    "Resources": [
+      {
+        "Name": "control_reg_data",
+        "Cycles": "1"
+      },
+      {
+        "Name": "sram",
+        "Cycles": "1"
+      },
+      {
+        "Name": "data_register",
+        "Cycles": "1"
+      }
+    ]
+  },
+  {
+    "Name": "update_alu",
+    "Cycles": "1",
+    "Resources": [
+      {
+        "Name": "control_reg_data",
+        "Cycles": "1"
+      },
+      {
+        "Name": "sram",
+        "Cycles": "1"
+      },
+      {
+        "Name": "data_register",
+        "Cycles": "1"
+      }
+    ]
+  }
+]

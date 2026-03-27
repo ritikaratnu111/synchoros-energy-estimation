@@ -1,0 +1,268 @@
+library (tsdn40_dummy) {
+  /* --- Units & basics --- */
+  delay_model                 : table_lookup;
+  time_unit                   : "1ns";
+  voltage_unit                : "1V";
+  current_unit                : "1mA";
+  pulling_resistance_unit     : "1kohm";
+  leakage_power_unit          : "1nW";
+  capacitive_load_unit (1, pf);
+  nom_process                 : 1;
+  nom_voltage                 : 1.0;
+  nom_temperature             : 25;
+
+  /* Bus type helpers */
+  type (bus9)  { base_type : array; data_type : bit; bit_width : 9;  bit_from : 8;  bit_to : 0;  downto : true; }
+  type (bus32) { base_type : array; data_type : bit; bit_width : 32; bit_from : 31; bit_to : 0; downto : true; }
+
+  cell (TSDN40LPA512X32M4F) {
+    is_macro_cell            : true;
+    area                     : 100000;
+
+    /* Power pins (internal; not top-level ports) */
+    pg_pin (VDD) { pg_type : primary_power;  voltage_name : "VDD"; }
+    pg_pin (VSS) { pg_type : primary_ground; voltage_name : "VSS"; }
+
+    /* --- Clock pins: mark as sinks so CTS can target them --- */
+    pin (CLKA) { direction : input; clock : true; capacitance : 0.010; max_transition : 0.30; }
+    pin (CLKB) { direction : input; clock : true; capacitance : 0.010; max_transition : 0.30; }
+    pin (CLKM) { direction : input; clock : true; capacitance : 0.010; max_transition : 0.30; }
+
+    /* --- Scalar control pins (assumed active-high) --- */
+    pin (WEBA)  { direction : input; capacitance : 0.005; max_transition : 0.30; }
+    pin (CEBA)  { direction : input; capacitance : 0.005; max_transition : 0.30; }
+    pin (WEBB)  { direction : input; capacitance : 0.005; max_transition : 0.30; }
+    pin (CEBB)  { direction : input; capacitance : 0.005; max_transition : 0.30; }
+    pin (PD)    { direction : input; capacitance : 0.005; max_transition : 0.30; }
+    pin (WEBMA) { direction : input; capacitance : 0.005; max_transition : 0.30; }
+    pin (CEBMA) { direction : input; capacitance : 0.005; max_transition : 0.30; }
+    pin (WEBMB) { direction : input; capacitance : 0.005; max_transition : 0.30; }
+    pin (CEBMB) { direction : input; capacitance : 0.005; max_transition : 0.30; }
+    pin (BIST)  { direction : input; capacitance : 0.005; max_transition : 0.30; }
+
+    /* --- Buses --- */
+    bus (AA) { bus_type : bus9; direction : input;
+      pin (AA[8]) { capacitance : 0.004; } pin (AA[7]) { capacitance : 0.004; }
+      pin (AA[6]) { capacitance : 0.004; } pin (AA[5]) { capacitance : 0.004; }
+      pin (AA[4]) { capacitance : 0.004; } pin (AA[3]) { capacitance : 0.004; }
+      pin (AA[2]) { capacitance : 0.004; } pin (AA[1]) { capacitance : 0.004; }
+      pin (AA[0]) { capacitance : 0.004; }
+    }
+
+    bus (DA) { bus_type : bus32; direction : input;
+      pin (DA[31]) { capacitance : 0.004; } pin (DA[30]) { capacitance : 0.004; }
+      pin (DA[29]) { capacitance : 0.004; } pin (DA[28]) { capacitance : 0.004; }
+      pin (DA[27]) { capacitance : 0.004; } pin (DA[26]) { capacitance : 0.004; }
+      pin (DA[25]) { capacitance : 0.004; } pin (DA[24]) { capacitance : 0.004; }
+      pin (DA[23]) { capacitance : 0.004; } pin (DA[22]) { capacitance : 0.004; }
+      pin (DA[21]) { capacitance : 0.004; } pin (DA[20]) { capacitance : 0.004; }
+      pin (DA[19]) { capacitance : 0.004; } pin (DA[18]) { capacitance : 0.004; }
+      pin (DA[17]) { capacitance : 0.004; } pin (DA[16]) { capacitance : 0.004; }
+      pin (DA[15]) { capacitance : 0.004; } pin (DA[14]) { capacitance : 0.004; }
+      pin (DA[13]) { capacitance : 0.004; } pin (DA[12]) { capacitance : 0.004; }
+      pin (DA[11]) { capacitance : 0.004; } pin (DA[10]) { capacitance : 0.004; }
+      pin (DA[9])  { capacitance : 0.004; } pin (DA[8])  { capacitance : 0.004; }
+      pin (DA[7])  { capacitance : 0.004; } pin (DA[6])  { capacitance : 0.004; }
+      pin (DA[5])  { capacitance : 0.004; } pin (DA[4])  { capacitance : 0.004; }
+      pin (DA[3])  { capacitance : 0.004; } pin (DA[2])  { capacitance : 0.004; }
+      pin (DA[1])  { capacitance : 0.004; } pin (DA[0])  { capacitance : 0.004; }
+    }
+
+    bus (BWEBA) { bus_type : bus32; direction : input;
+      pin (BWEBA[31]) { capacitance : 0.004; } pin (BWEBA[30]) { capacitance : 0.004; }
+      pin (BWEBA[29]) { capacitance : 0.004; } pin (BWEBA[28]) { capacitance : 0.004; }
+      pin (BWEBA[27]) { capacitance : 0.004; } pin (BWEBA[26]) { capacitance : 0.004; }
+      pin (BWEBA[25]) { capacitance : 0.004; } pin (BWEBA[24]) { capacitance : 0.004; }
+      pin (BWEBA[23]) { capacitance : 0.004; } pin (BWEBA[22]) { capacitance : 0.004; }
+      pin (BWEBA[21]) { capacitance : 0.004; } pin (BWEBA[20]) { capacitance : 0.004; }
+      pin (BWEBA[19]) { capacitance : 0.004; } pin (BWEBA[18]) { capacitance : 0.004; }
+      pin (BWEBA[17]) { capacitance : 0.004; } pin (BWEBA[16]) { capacitance : 0.004; }
+      pin (BWEBA[15]) { capacitance : 0.004; } pin (BWEBA[14]) { capacitance : 0.004; }
+      pin (BWEBA[13]) { capacitance : 0.004; } pin (BWEBA[12]) { capacitance : 0.004; }
+      pin (BWEBA[11]) { capacitance : 0.004; } pin (BWEBA[10]) { capacitance : 0.004; }
+      pin (BWEBA[9])  { capacitance : 0.004; } pin (BWEBA[8])  { capacitance : 0.004; }
+      pin (BWEBA[7])  { capacitance : 0.004; } pin (BWEBA[6])  { capacitance : 0.004; }
+      pin (BWEBA[5])  { capacitance : 0.004; } pin (BWEBA[4])  { capacitance : 0.004; }
+      pin (BWEBA[3])  { capacitance : 0.004; } pin (BWEBA[2])  { capacitance : 0.004; }
+      pin (BWEBA[1])  { capacitance : 0.004; } pin (BWEBA[0])  { capacitance : 0.004; }
+    }
+
+    bus (AB) { bus_type : bus9; direction : input;
+      pin (AB[8]) { capacitance : 0.004; } pin (AB[7]) { capacitance : 0.004; }
+      pin (AB[6]) { capacitance : 0.004; } pin (AB[5]) { capacitance : 0.004; }
+      pin (AB[4]) { capacitance : 0.004; } pin (AB[3]) { capacitance : 0.004; }
+      pin (AB[2]) { capacitance : 0.004; } pin (AB[1]) { capacitance : 0.004; }
+      pin (AB[0]) { capacitance : 0.004; }
+    }
+
+    bus (DB) { bus_type : bus32; direction : input;
+      pin (DB[31]) { capacitance : 0.004; } pin (DB[30]) { capacitance : 0.004; }
+      pin (DB[29]) { capacitance : 0.004; } pin (DB[28]) { capacitance : 0.004; }
+      pin (DB[27]) { capacitance : 0.004; } pin (DB[26]) { capacitance : 0.004; }
+      pin (DB[25]) { capacitance : 0.004; } pin (DB[24]) { capacitance : 0.004; }
+      pin (DB[23]) { capacitance : 0.004; } pin (DB[22]) { capacitance : 0.004; }
+      pin (DB[21]) { capacitance : 0.004; } pin (DB[20]) { capacitance : 0.004; }
+      pin (DB[19]) { capacitance : 0.004; } pin (DB[18]) { capacitance : 0.004; }
+      pin (DB[17]) { capacitance : 0.004; } pin (DB[16]) { capacitance : 0.004; }
+      pin (DB[15]) { capacitance : 0.004; } pin (DB[14]) { capacitance : 0.004; }
+      pin (DB[13]) { capacitance : 0.004; } pin (DB[12]) { capacitance : 0.004; }
+      pin (DB[11]) { capacitance : 0.004; } pin (DB[10]) { capacitance : 0.004; }
+      pin (DB[9])  { capacitance : 0.004; } pin (DB[8])  { capacitance : 0.004; }
+      pin (DB[7])  { capacitance : 0.004; } pin (DB[6])  { capacitance : 0.004; }
+      pin (DB[5])  { capacitance : 0.004; } pin (DB[4])  { capacitance : 0.004; }
+      pin (DB[3])  { capacitance : 0.004; } pin (DB[2])  { capacitance : 0.004; }
+      pin (DB[1])  { capacitance : 0.004; } pin (DB[0])  { capacitance : 0.004; }
+    }
+
+    bus (BWEBB) { bus_type : bus32; direction : input;
+      pin (BWEBB[31]) { capacitance : 0.004; } pin (BWEBB[30]) { capacitance : 0.004; }
+      pin (BWEBB[29]) { capacitance : 0.004; } pin (BWEBB[28]) { capacitance : 0.004; }
+      pin (BWEBB[27]) { capacitance : 0.004; } pin (BWEBB[26]) { capacitance : 0.004; }
+      pin (BWEBB[25]) { capacitance : 0.004; } pin (BWEBB[24]) { capacitance : 0.004; }
+      pin (BWEBB[23]) { capacitance : 0.004; } pin (BWEBB[22]) { capacitance : 0.004; }
+      pin (BWEBB[21]) { capacitance : 0.004; } pin (BWEBB[20]) { capacitance : 0.004; }
+      pin (BWEBB[19]) { capacitance : 0.004; } pin (BWEBB[18]) { capacitance : 0.004; }
+      pin (BWEBB[17]) { capacitance : 0.004; } pin (BWEBB[16]) { capacitance : 0.004; }
+      pin (BWEBB[15]) { capacitance : 0.004; } pin (BWEBB[14]) { capacitance : 0.004; }
+      pin (BWEBB[13]) { capacitance : 0.004; } pin (BWEBB[12]) { capacitance : 0.004; }
+      pin (BWEBB[11]) { capacitance : 0.004; } pin (BWEBB[10]) { capacitance : 0.004; }
+      pin (BWEBB[9])  { capacitance : 0.004; } pin (BWEBB[8])  { capacitance : 0.004; }
+      pin (BWEBB[7])  { capacitance : 0.004; } pin (BWEBB[6])  { capacitance : 0.004; }
+      pin (BWEBB[5])  { capacitance : 0.004; } pin (BWEBB[4])  { capacitance : 0.004; }
+      pin (BWEBB[3])  { capacitance : 0.004; } pin (BWEBB[2])  { capacitance : 0.004; }
+      pin (BWEBB[1])  { capacitance : 0.004; } pin (BWEBB[0])  { capacitance : 0.004; }
+    }
+
+    bus (AMA) { bus_type : bus9; direction : input;
+      pin (AMA[8]) { capacitance : 0.004; } pin (AMA[7]) { capacitance : 0.004; }
+      pin (AMA[6]) { capacitance : 0.004; } pin (AMA[5]) { capacitance : 0.004; }
+      pin (AMA[4]) { capacitance : 0.004; } pin (AMA[3]) { capacitance : 0.004; }
+      pin (AMA[2]) { capacitance : 0.004; } pin (AMA[1]) { capacitance : 0.004; }
+      pin (AMA[0]) { capacitance : 0.004; }
+    }
+
+    bus (DMA) { bus_type : bus32; direction : input;
+      pin (DMA[31]) { capacitance : 0.004; } pin (DMA[30]) { capacitance : 0.004; }
+      pin (DMA[29]) { capacitance : 0.004; } pin (DMA[28]) { capacitance : 0.004; }
+      pin (DMA[27]) { capacitance : 0.004; } pin (DMA[26]) { capacitance : 0.004; }
+      pin (DMA[25]) { capacitance : 0.004; } pin (DMA[24]) { capacitance : 0.004; }
+      pin (DMA[23]) { capacitance : 0.004; } pin (DMA[22]) { capacitance : 0.004; }
+      pin (DMA[21]) { capacitance : 0.004; } pin (DMA[20]) { capacitance : 0.004; }
+      pin (DMA[19]) { capacitance : 0.004; } pin (DMA[18]) { capacitance : 0.004; }
+      pin (DMA[17]) { capacitance : 0.004; } pin (DMA[16]) { capacitance : 0.004; }
+      pin (DMA[15]) { capacitance : 0.004; } pin (DMA[14]) { capacitance : 0.004; }
+      pin (DMA[13]) { capacitance : 0.004; } pin (DMA[12]) { capacitance : 0.004; }
+      pin (DMA[11]) { capacitance : 0.004; } pin (DMA[10]) { capacitance : 0.004; }
+      pin (DMA[9])  { capacitance : 0.004; } pin (DMA[8])  { capacitance : 0.004; }
+      pin (DMA[7])  { capacitance : 0.004; } pin (DMA[6])  { capacitance : 0.004; }
+      pin (DMA[5])  { capacitance : 0.004; } pin (DMA[4])  { capacitance : 0.004; }
+      pin (DMA[3])  { capacitance : 0.004; } pin (DMA[2])  { capacitance : 0.004; }
+      pin (DMA[1])  { capacitance : 0.004; } pin (DMA[0])  { capacitance : 0.004; }
+    }
+
+    bus (BWEBMA) { bus_type : bus32; direction : input;
+      pin (BWEBMA[31]) { capacitance : 0.004; } pin (BWEBMA[30]) { capacitance : 0.004; }
+      pin (BWEBMA[29]) { capacitance : 0.004; } pin (BWEBMA[28]) { capacitance : 0.004; }
+      pin (BWEBMA[27]) { capacitance : 0.004; } pin (BWEBMA[26]) { capacitance : 0.004; }
+      pin (BWEBMA[25]) { capacitance : 0.004; } pin (BWEBMA[24]) { capacitance : 0.004; }
+      pin (BWEBMA[23]) { capacitance : 0.004; } pin (BWEBMA[22]) { capacitance : 0.004; }
+      pin (BWEBMA[21]) { capacitance : 0.004; } pin (BWEBMA[20]) { capacitance : 0.004; }
+      pin (BWEBMA[19]) { capacitance : 0.004; } pin (BWEBMA[18]) { capacitance : 0.004; }
+      pin (BWEBMA[17]) { capacitance : 0.004; } pin (BWEBMA[16]) { capacitance : 0.004; }
+      pin (BWEBMA[15]) { capacitance : 0.004; } pin (BWEBMA[14]) { capacitance : 0.004; }
+      pin (BWEBMA[13]) { capacitance : 0.004; } pin (BWEBMA[12]) { capacitance : 0.004; }
+      pin (BWEBMA[11]) { capacitance : 0.004; } pin (BWEBMA[10]) { capacitance : 0.004; }
+      pin (BWEBMA[9])  { capacitance : 0.004; } pin (BWEBMA[8])  { capacitance : 0.004; }
+      pin (BWEBMA[7])  { capacitance : 0.004; } pin (BWEBMA[6])  { capacitance : 0.004; }
+      pin (BWEBMA[5])  { capacitance : 0.004; } pin (BWEBMA[4])  { capacitance : 0.004; }
+      pin (BWEBMA[3])  { capacitance : 0.004; } pin (BWEBMA[2])  { capacitance : 0.004; }
+      pin (BWEBMA[1])  { capacitance : 0.004; } pin (BWEBMA[0])  { capacitance : 0.004; }
+    }
+
+    bus (AMB) { bus_type : bus9; direction : input;
+      pin (AMB[8]) { capacitance : 0.004; } pin (AMB[7]) { capacitance : 0.004; }
+      pin (AMB[6]) { capacitance : 0.004; } pin (AMB[5]) { capacitance : 0.004; }
+      pin (AMB[4]) { capacitance : 0.004; } pin (AMB[3]) { capacitance : 0.004; }
+      pin (AMB[2]) { capacitance : 0.004; } pin (AMB[1]) { capacitance : 0.004; }
+      pin (AMB[0]) { capacitance : 0.004; }
+    }
+
+    bus (DMB) { bus_type : bus32; direction : input;
+      pin (DMB[31]) { capacitance : 0.004; } pin (DMB[30]) { capacitance : 0.004; }
+      pin (DMB[29]) { capacitance : 0.004; } pin (DMB[28]) { capacitance : 0.004; }
+      pin (DMB[27]) { capacitance : 0.004; } pin (DMB[26]) { capacitance : 0.004; }
+      pin (DMB[25]) { capacitance : 0.004; } pin (DMB[24]) { capacitance : 0.004; }
+      pin (DMB[23]) { capacitance : 0.004; } pin (DMB[22]) { capacitance : 0.004; }
+      pin (DMB[21]) { capacitance : 0.004; } pin (DMB[20]) { capacitance : 0.004; }
+      pin (DMB[19]) { capacitance : 0.004; } pin (DMB[18]) { capacitance : 0.004; }
+      pin (DMB[17]) { capacitance : 0.004; } pin (DMB[16]) { capacitance : 0.004; }
+      pin (DMB[15]) { capacitance : 0.004; } pin (DMB[14]) { capacitance : 0.004; }
+      pin (DMB[13]) { capacitance : 0.004; } pin (DMB[12]) { capacitance : 0.004; }
+      pin (DMB[11]) { capacitance : 0.004; } pin (DMB[10]) { capacitance : 0.004; }
+      pin (DMB[9])  { capacitance : 0.004; } pin (DMB[8])  { capacitance : 0.004; }
+      pin (DMB[7])  { capacitance : 0.004; } pin (DMB[6])  { capacitance : 0.004; }
+      pin (DMB[5])  { capacitance : 0.004; } pin (DMB[4])  { capacitance : 0.004; }
+      pin (DMB[3])  { capacitance : 0.004; } pin (DMB[2])  { capacitance : 0.004; }
+      pin (DMB[1])  { capacitance : 0.004; } pin (DMB[0])  { capacitance : 0.004; }
+    }
+
+    bus (BWEBMB) { bus_type : bus32; direction : input;
+      pin (BWEBMB[31]) { capacitance : 0.004; } pin (BWEBMB[30]) { capacitance : 0.004; }
+      pin (BWEBMB[29]) { capacitance : 0.004; } pin (BWEBMB[28]) { capacitance : 0.004; }
+      pin (BWEBMB[27]) { capacitance : 0.004; } pin (BWEBMB[26]) { capacitance : 0.004; }
+      pin (BWEBMB[25]) { capacitance : 0.004; } pin (BWEBMB[24]) { capacitance : 0.004; }
+      pin (BWEBMB[23]) { capacitance : 0.004; } pin (BWEBMB[22]) { capacitance : 0.004; }
+      pin (BWEBMB[21]) { capacitance : 0.004; } pin (BWEBMB[20]) { capacitance : 0.004; }
+      pin (BWEBMB[19]) { capacitance : 0.004; } pin (BWEBMB[18]) { capacitance : 0.004; }
+      pin (BWEBMB[17]) { capacitance : 0.004; } pin (BWEBMB[16]) { capacitance : 0.004; }
+      pin (BWEBMB[15]) { capacitance : 0.004; } pin (BWEBMB[14]) { capacitance : 0.004; }
+      pin (BWEBMB[13]) { capacitance : 0.004; } pin (BWEBMB[12]) { capacitance : 0.004; }
+      pin (BWEBMB[11]) { capacitance : 0.004; } pin (BWEBMB[10]) { capacitance : 0.004; }
+      pin (BWEBMB[9])  { capacitance : 0.004; } pin (BWEBMB[8])  { capacitance : 0.004; }
+      pin (BWEBMB[7])  { capacitance : 0.004; } pin (BWEBMB[6])  { capacitance : 0.004; }
+      pin (BWEBMB[5])  { capacitance : 0.004; } pin (BWEBMB[4])  { capacitance : 0.004; }
+      pin (BWEBMB[3])  { capacitance : 0.004; } pin (BWEBMB[2])  { capacitance : 0.004; }
+      pin (BWEBMB[1])  { capacitance : 0.004; } pin (BWEBMB[0])  { capacitance : 0.004; }
+    }
+
+    /* --- Outputs (limit load so buffering stays sane) --- */
+    bus (QA) { bus_type : bus32; direction : output; max_capacitance : 0.020;
+      pin (QA[31]) { max_capacitance : 0.020; } pin (QA[30]) { max_capacitance : 0.020; }
+      pin (QA[29]) { max_capacitance : 0.020; } pin (QA[28]) { max_capacitance : 0.020; }
+      pin (QA[27]) { max_capacitance : 0.020; } pin (QA[26]) { max_capacitance : 0.020; }
+      pin (QA[25]) { max_capacitance : 0.020; } pin (QA[24]) { max_capacitance : 0.020; }
+      pin (QA[23]) { max_capacitance : 0.020; } pin (QA[22]) { max_capacitance : 0.020; }
+      pin (QA[21]) { max_capacitance : 0.020; } pin (QA[20]) { max_capacitance : 0.020; }
+      pin (QA[19]) { max_capacitance : 0.020; } pin (QA[18]) { max_capacitance : 0.020; }
+      pin (QA[17]) { max_capacitance : 0.020; } pin (QA[16]) { max_capacitance : 0.020; }
+      pin (QA[15]) { max_capacitance : 0.020; } pin (QA[14]) { max_capacitance : 0.020; }
+      pin (QA[13]) { max_capacitance : 0.020; } pin (QA[12]) { max_capacitance : 0.020; }
+      pin (QA[11]) { max_capacitance : 0.020; } pin (QA[10]) { max_capacitance : 0.020; }
+      pin (QA[9])  { max_capacitance : 0.020; } pin (QA[8])  { max_capacitance : 0.020; }
+      pin (QA[7])  { max_capacitance : 0.020; } pin (QA[6])  { max_capacitance : 0.020; }
+      pin (QA[5])  { max_capacitance : 0.020; } pin (QA[4])  { max_capacitance : 0.020; }
+      pin (QA[3])  { max_capacitance : 0.020; } pin (QA[2])  { max_capacitance : 0.020; }
+      pin (QA[1])  { max_capacitance : 0.020; } pin (QA[0])  { max_capacitance : 0.020; }
+    }
+
+    bus (QB) { bus_type : bus32; direction : output; max_capacitance : 0.020;
+      pin (QB[31]) { max_capacitance : 0.020; } pin (QB[30]) { max_capacitance : 0.020; }
+      pin (QB[29]) { max_capacitance : 0.020; } pin (QB[28]) { max_capacitance : 0.020; }
+      pin (QB[27]) { max_capacitance : 0.020; } pin (QB[26]) { max_capacitance : 0.020; }
+      pin (QB[25]) { max_capacitance : 0.020; } pin (QB[24]) { max_capacitance : 0.020; }
+      pin (QB[23]) { max_capacitance : 0.020; } pin (QB[22]) { max_capacitance : 0.020; }
+      pin (QB[21]) { max_capacitance : 0.020; } pin (QB[20]) { max_capacitance : 0.020; }
+      pin (QB[19]) { max_capacitance : 0.020; } pin (QB[18]) { max_capacitance : 0.020; }
+      pin (QB[17]) { max_capacitance : 0.020; } pin (QB[16]) { max_capacitance : 0.020; }
+      pin (QB[15]) { max_capacitance : 0.020; } pin (QB[14]) { max_capacitance : 0.020; }
+      pin (QB[13]) { max_capacitance : 0.020; } pin (QB[12]) { max_capacitance : 0.020; }
+      pin (QB[11]) { max_capacitance : 0.020; } pin (QB[10]) { max_capacitance : 0.020; }
+      pin (QB[9])  { max_capacitance : 0.020; } pin (QB[8])  { max_capacitance : 0.020; }
+      pin (QB[7])  { max_capacitance : 0.020; } pin (QB[6])  { max_capacitance : 0.020; }
+      pin (QB[5])  { max_capacitance : 0.020; } pin (QB[4])  { max_capacitance : 0.020; }
+      pin (QB[3])  { max_capacitance : 0.020; } pin (QB[2])  { max_capacitance : 0.020; }
+      pin (QB[1])  { max_capacitance : 0.020; } pin (QB[0])  { max_capacitance : 0.020; }
+    }
+  }
+}
+
