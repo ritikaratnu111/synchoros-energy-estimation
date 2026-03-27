@@ -1,0 +1,45 @@
+\section{Energy Estimation}
+Building on the characterization methodology, this section presents the synchoros energy estimation method.
+As stated earlier, mapping an algorithm as a CGRA design specifies the type, number, and operations implemented by the resources in SiLago blocks. 
+%These operations are characterized, as elaborated in the previous section, by factoring in the spatial context and impact of wires at three levels.
+Composition by abutment ensures that the total energy of the CGRA can be expressed as the sum of the energy of its constituent SiLago blocks, eliminating the need for additional correction terms.
+%\subsection{Fabric-level Energy Estimation Equations}
+The total energy of the CGRA that implements an algorithm is,
+\begin{equation}
+E_{Fabric,m}=\sum_{s \in S} E_{s,m}
+\end{equation}
+where $S$ denotes the set of SiLago blocks in the fabric and $E_{s,m}$ is the energy of block $s$ in executing the mapping $m$, which also identifies the spatio-temporal distribution of operations in the block \textit{s}. 
+
+The energy cost of each block is the sum of contributions from its functional resources, the local NoC segments, and the local clock-tree segment.
+
+\begin{equation}
+E_{s,m}=\sum_{r \in R}E_{r,m} + E_{LNoC,m} + E_{LCT,m} 
+\end{equation}
+Here, ${r \in R}$ denotes the functional resources, while $E_{LNoC}$ and $E_{LCT}$ account for the local NoC and clock-tree segments in $s$, respectively.
+
+The energy of functional components is evaluated by accumulating the power in the mapping operations over the number of cycles for each operation:
+\begin{equation}
+E_{c,m} = \sum_{op \in m} P_{c,op} \cdot n_{c,op}
+\end{equation}
+
+where $P_{r,op}$ is the characterized power, i.e., the converged value of the power of the resource in operation $op$.
+
+The LNoC and the LCT also exhibit different energy consumption levels depending on their operation. 
+LNoC energy is also implied by the operations, e.g., different energy when sending or receiving data over different source-destination pairs .
+Their energy is accumulated in the same way as the energy consumed by a resource.
+\begin{equation}
+E_{LNoC} =
+\sum_{op \in m}
+P_{LNoC,op} \cdot n_{LNoC,op}
+\end{equation}
+Energy of LNoC segment is different based on its \textit{state}, i.e., when it is active versus when it is gated. 
+\begin{equation}
+E_{LCT} =
+\sum_{st \in St_{LCT}}
+P_{LCT,st} \cdot n_{LCT,st}
+\end{equation}
+
+%The requirements of energy estimation tools can be summarised as: the tool must enable agile and accurate estimation of energy consumption, and the tool must provide energy consumption breakdown to allow targeted optimizations during DSE~\cite{wijtvliet2021cgra}.
+The energy estimation is both accurate and agile.
+It is \emph{accurate} because the impact of all wires is naturally factored, and no correction terms are required.
+It is \textit{agile} because all power values are pre-characterized and stored in a database, enabling energy estimation via simple lookups. 

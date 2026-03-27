@@ -1,0 +1,35 @@
+\section{Introduction} \label{sec:intro}
+Coarse-Grained Reconfigurable Arrays (CGRAs) are promising accelerators that balance flexibility and energy efficiency for accelerating compute-intensive algorithms. 
+CGRAs feature an array of Processing Engines (PEs), each with compute and data memory elements connected through a configurable interconnect network.
+Design Space Exploration (DSE) for CGRAs consists of evaluating multiple micro-architectural options and tiling strategies to support algorithms that vary in: 1) functionality, or the types of algorithms, (2) data dimensions, and (3) parallelism— the number of PEs and ports for memory access.
+ 
+\textbf{DSE requires agile and accurate energy estimates:} Energy is a key criterion for DSE. 
+Energy estimations at DSE must be agile to evaluate desired design space points in in a reasonable time and accurate to avoid misleading results.
+However, accurate energy consumption of the design is available only after it is physically synthesized, i.e., when the design logic is implemented with standard cells and placed and routed (PnR) with wires (see Figure~\ref{fig:intro}).
+The energy resulting from routing of wires is significant—up to half of the total dynamic power, and becoming increasingly challenging to estimate as technology scales down~\cite{shi2024post,huang2023comprehensive,xie2021net2,chan2017routability}.
+\begin{figure}[t]
+    \centering
+    \scriptsize
+\input{figures/1_pre_vs_post_route}
+\caption{\small Pre-PnR and post-PnR energy consumption comparison for a 4x4 DRRA~\cite{hemani2017synchoricity,pudi2024application} CGRA.}
+\vspace{-6.5mm}
+\label{fig:intro}
+\end{figure}
+
+\textbf{State-of-the-art estimators are agile but inaccurate:} As physical synthesis is time-consuming, it is not scalable during DSE.
+Existing estimators favour agile methods that overlook the impact of layout and wires in the design, compromising accuracy.
+Accelergy~\cite{wu2019accelergy} is a popular estimation methodology for domain-specific accelerators (DSAs) that relies on fine-grained component characterization.
+Fine-grained components are the microarchitectural units at the finest granularity, e.g., an adder, that are common across most designs. 
+This makes the methodology broadly applicable, but its accuracy is limited as it does not account for the dominant energy of inter-component and inter-PE wires, which is only known after completing physical design.
+Examples of fine-grained characterization also include Aladdin~\cite{shao2014aladdin}, DSAGEN~\cite{weng2020dsagen}, and X-CGRA~\cite{akbari2019x}.
+
+Other estimators characterize specific instances from the design space after synthesis ~\cite{wijtvliet2021cgra,aspros2025flexible,juracy2022fast}. 
+Shi et al.~\cite{shi2024post} propose a meet-in-the-middle approach that characterizes place-and-routed PEs and uses a neural network model to estimate the impact of inter-PE wires.
+While these approaches can factor wires into characterization, \textit{they are limited to specific design instances}.
+Estimates are inconsistent for variations in functionality, dimensions, and parallelism.
+
+\textbf{Preserving physical information at DSE is the answer:} We note that the ad-hoc placement and routing between standard cells during physical synthesis imparts uncertainty in modelling energy consumption.
+\textit{Synchoros} (from Greek word "choros" for space) VLSI design style~\cite{hemani2017synchoricity} addresses this fundamental limitation of standard cell–based design flows: true implementation cost is known only after physical design.
+The broader objective of synchoricity has many sub-problems, and in this paper, we focus on one such sub-problem: predicting the energy cost of CGRA designs with agility and post-route accuracy. 
+
+\textbf{Contributions.} In this paper, we present a synchoros energy characterization and estimation methodology \footnote{Link to all the codes and experiments omitted for blind review, will be added upon acceptance.} that (1) enables a scalable one-time characterization effort that naturally factors in the impact of interconnects in a customizable, heterogeneous CGRA fabrics, and (2) provides agile and accurate estimations for diverse algorithms irrespective of variations in functionality, dimensions, and parallelism. 

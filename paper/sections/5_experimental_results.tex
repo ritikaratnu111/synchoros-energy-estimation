@@ -1,0 +1,137 @@
+\section{Experimental Results}
+In this section, we present the validation results of our
+methodology, followed by a comparison against two state-of-the-(SOTA)) estimation approaches. 
+We also examine the overheads of synchoricity to assess the trade-offs and benefits of synchoros energy estimations.
+\begin{figure}[h]
+    \centering
+
+    %--- Subfigure A ---
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \scriptsize
+        \includesvg[scale=0.4]{figures/4_high_level_arch.svg}
+        \caption{\small}
+        \label{fig:arch}
+    \end{subfigure}
+    %\vfill
+    %--- Subfigure B ---
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \input{figures/5_pareto}
+        \caption{\small}
+        \label{fig:pareto}
+    \end{subfigure}
+
+    \caption{\small (a) High-level architecture diagram with 4×4 PEs and four memory cells, and (b) pareto points for GEMM mappings, of DRRA and DiMArch CGRA ~\cite{hemani2017synchoricity,pudi2024integer,pudi2024application}.}
+    \label{fig:combined}
+\end{figure}
+\subsection{Experimental Setup}
+The energy estimation validation and evaluation are performed on DRRA and DiMArch CGRAs~\cite{hemani2017synchoricity,pudi2024integer,pudi2024application} (Fig.~\ref {fig:arch}). 
+DRRA, or Dynamically Reconfigurable Resource Array, provides computational PEs consisting of a controller, a register file (RF), and an ALU for arithmetic operations.
+DiMArch, or Distributed Memory Architecture, provides memory cells consisting of SRAM banks to serve as data memory. 
+We choose this CGRA as the increase in computational parallelism in DRRA can be matched with an increase in parallelism in DiMArch. 
+Different architectural alternatives can be implemented by clustering DRRA, DiMArch cells.
+The number of DRRA columns determines the number of CGRA data memory ports.
+%Note that our contributions are generally applicable for other CGRAs as well.
+The cells are physically synthesized and characterized with a convergence criterion of 2\%.
+
+%Algorithms from diverse domains are used for validation.
+Table \ref{Table} lists the Berkeley Dwarf~\cite{asanovic2006landscape} and the data sizes of the algorithm workload. 
+Mapping is performed by Vesyla\cite{yang2022vesyla}, the high-level synthesis tool for DRRA and DiMArch. 
+These mappings are used directly to estimate the energy consumption of the resulting design.
+To validate the estimates, we sweep the data sizes and all possible combinations of the number of PEs (DRRA cells) and the number of memory cells (DiMArch cells) to construct a Pareto frontier for each algorithm. 
+Six points from each frontier are selected for validation (see Figure~\ref{fig:pareto}).
+For ground-truth comparison, the corresponding designs are synthesized, placed, and routed in 28nm technology at 100 MHz. 
+\input{tables/5_berkeley_dwarf}
+\input{tables/5_parameters}
+% \begin{figure}[h]
+%     \centering
+%     \scriptsize
+%     \includesvg[scale=0.4]{figures/4_high_level_arch.svg}
+% \caption{\small High-Level architecture diagram of a DRRA and DiMArch CGRA with 4x4 PEs and 4 memory cells.}
+% \label{fig:arch}
+% \end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \input{figures/5_pareto}
+%     \caption{\small Pareto points for GEMM mappings on DRRA and DiMArch~\cite{hemani2017synchoricity,pudi2024integer,pudi2024application}.}
+%     \label{fig:pareto}
+% \end{figure}
+\begin{figure*}[t]
+    \centering
+    % Subfigure (a)
+    \begin{subfigure}{\textwidth}
+        \centering
+        \input{figures/8_power_validation}
+        \caption*{\small (a)}
+    \end{subfigure}
+    \hfill
+    % Subfigure (b)
+    \begin{subfigure}{\textwidth}
+        \centering
+        \input{figures/9_power_validation}
+        \caption*{\small (b)}
+    \end{subfigure}
+
+    \caption{\small Power estimation comparison with ground truth for three different methodologies.}
+    \label{fig:power}
+\end{figure*}
+
+\begin{figure}
+        \centering    
+        \input{figures/6_relative}    
+        \caption{\small Relative energy breakdown within a DRRA block.}        
+        \label{fig:relative}
+\end{figure}
+\begin{figure}[t]
+    \input{figures/7_granularity}
+    \caption{\small Estimate accuracy at different hierarchical granularity.}
+    \label{fig:granularity}
+\end{figure}
+
+
+% \input{tables/3_comparison}
+\subsection{Validation}
+We validated the total energy consumption and relative energy breakdown for each Pareto design point. 
+Figure~\ref{fig:power} shows that our methodology achieves ~2\% error against ground truth across algorithm variations in functionality, dimensions, and parallelism compared against post-route ground truth results.  
+
+
+Figure~\ref{fig:relative} shows the relative energy breakdown for a GEMM mapping with medium data size, 4x4 PEs, and 4 memory cells. 
+The impact of all the wires is captured in the characterized energy values and, barring switching data variations, remains unchanged when performing estimations across all resources in the design.
+
+
+% The validation results for variations are presented in Figure~\ref{fig:dimensions}. 
+% The estimations are consistently accurate across all of the designs with average errors within 2\% relative to post-route consumption. 
+
+\subsection{SOTA Comparison}
+% We also compare our estimates with two other methodologies, Accelergy and CGRA-EAM~\cite{wijtvliet2021cgra}.
+Accelergy~\cite{wu2019accelergy} specifies the design with user-defined components that are derived from basic fine-grained components. 
+It focuses on datapath components, but does not consider the inter-component wires. 
+For DRRA and DiMArch, the characterization database is specified in terms of 11 fine-grained components in total. 
+The characterized energy values are prepared from post-layout simulations of independently synthesized fine-grained components.
+Accelergy has high accuracy at the fine-grained level, such as for adders, exceeding 97\% (see Figure~\ref{fig:granularity}). 
+However, accuracy decreases at higher granularity because the wires are not accounted for.
+The impact of wires becomes more significant as the complexity and size of the evaluated micro-architectural units grow. 
+%In contrast, our methodology is consistently accurate across all hierarchical levels in the design. 
+
+CGRA-EAM~\cite{wijtvliet2021cgra} characterizes the power of coarse-grained components after synthesis, which includes more information details compared to the fine-grained approach. 
+However, its accuracy is limited to specific characterized design instances.
+
+\subsection{Overheads of synchoricity}
+Having validated the accuracy of our methodology across functionality, dimensions, and energy breakdown, we now examine the associated overheads of synchoricity. 
+In addition to DRRA+DiMArch CGRAs, we apply synchoros design principles to the HyCUBE CGRA~\cite{karunaratne2017hycube} and ADRES CGRA~\cite{mei2007adres} and quantify the design overheads introduced by synchoricity.
+
+To apply synchoricity on designs, the PEs are synthesized and made abutment-ready after fixing the layout and peripheral interconnect locations. 
+We implemented 4x4 CGRAs in 28nm process.
+\input{tables/4_synchoricity}
+
+The abutment-ready requirements in synchoricity impose restrictions on the layout of the blocks. 
+Each block has to fit in the virtual grid. 
+The size, shape, and location of the in and out pins are standardized to enable the composition by abutment. 
+Table~\ref {tab:overhead} shows a comparison of additional overhead in terms of total standard cells and energy assuming $10\%$ switching. 
+Based on the comparison, although synchoricity introduces modest overheads, we believe that the compromises are outweighed by the benefits —namely, agile and accurate energy estimation from higher levels of abstraction.
+%accurate energy estimations and the reduced engineering costs of design and fabrication. 
+Similar compromises were also adopted when standard cells were introduced and replaced the Mead-Conway full-custom design flow~\cite{dally201321st}.
+
+
+

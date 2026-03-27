@@ -1,0 +1,81 @@
+\section{Background and Motivation}
+In this section, we present a background of synchoros VLSI Design style and the motivation for leveraging synchoricity in estimation. 
+\subsection{Synchoros VLSI design style}
+Synchoros VLSI design style aims at preserving the physical design details at all levels of abstraction.
+\textit{Synchoricity} discretises space with a virtual grid and uses SiLago (Silicon Lego) blocks as coarse-grained building units, like Lego bricks.
+The blocks absorb all the metal layers' details so that a CGRA can be composed by abutment of SiLago blocks without having to do logic or physical synthesis. 
+The core idea is to ensure that all valid neighbours bring their wires to the right place on the periphery and the right metal layer and incorporate ancillary structures and circuits to ensure design rules are not violated. 
+This enables composing arbitrary synchoros designs in terms of SiLago blocks to create timing and DRC clean GDSII ~\cite{gonzalez2021synthesis,stathis2023clock}. 
+Wires are not synthesised de novo, as in conventional standard-cell–based flows.
+Instead, wires emerge through the abutment of pre-existing wire fragments in SiLago blocks. 
+%Composition by abutment was also practised in the full custom design era, albeit at the bit-slice level. 
+%The blocks are implemented using standard cells, making the overall design flow compatible with existing foundry flows. 
+
+SiLago blocks, like Lego bricks, come in different types to cater to different requirements and fall under two main categories, infrastructural and functional.
+Infrastructural blocks are used to glue together functional regions.
+Functional regions are aggregates of functional blocks for acceleration, such as CGRAs (Figure ~\ref{fig:floorplan}). 
+% Fig. 2 shows an example floorplan of a \textit{synchoros} design with three functional regions.
+
+The concept of chiplets~\cite{loh2021understanding} has similarities; however, the composition of chiplets is in terms of manufactured chips, whereas in the case of SiLago blocks, it is the GDSII-level designs that abut to create a design. Similar principles for modular design have been discussed by Dally et al.~\cite{dally201321st}. 
+The key difference is that Dally et. al are attempting to streamline the backend VLSI design flow for efficiency.
+The objectives of synchoricity aim at automating design from higher abstractions by making the impact of wires predictable. 
+
+
+\subsection{Motivation for synchoros energy estimation}
+Let \textit{O} denote the set of all operations supported by a CGRA. 
+For an algorithm mapping $m$, the CGRA configware specifies a subset, 
+\[
+O_{m} \subseteq O
+\]
+consisting of operations that are actually invoked. 
+For each operation $o_i \in O_{m}$, the configware also specifies: • its spatial context, and • its activation count $n_i$.
+
+The total energy $E_m$ of the mapped instance is:
+\[
+E_m = \sum_{o_{i}\epsilon O_m}^{} n_i \cdot e_i
+\]
+where $e_i$ is the energy consumed per activation of $o_i$.
+The value $e_i$ is an intrinsic property of the operation but also depends on its \textit{spatial context}, i.e., the set of neighbouring PEs.
+Different neighbours imply variations in wire length, drive strength, and load, all of which affect energy consumption.
+
+In synchoros design, the regularity of the grid ensures space invariance of the spatial context. When two valid neighbours abut at any place in the fabric, the electrical and technological implications of this abutment are identical.
+Consequently,
+\begin{itemize}
+    \item if operations \(o_i\) and \(o_j\) are mapped to different PEs, then \(e_i = e_j\)
+    \item for any modifications in algorithm functionality, dimensions, and parallelism, only the set $O_m$ and $n_i$ change; the characterized values $e_i$ remain valid.
+\end{itemize}
+
+These properties enable not only agile, post-route-accurate estimation but also a scalable one-time characterization effort.
+Spatial invariance does not hold in asynchoros standard cell-based design flows, where physical design is done de novo.
+%and violates the spatial invariance property of synchoros design. 
+Consequently, identical operations at different coordinates may yield different energy values. 
+This could imply two cases. One, storing in an unscalably
+large database with energy values for all possible variations in
+functionality, dimensions, and parallelism. Two, profiling only a subset of values at the cost of accuracy.
+% This would imply a need for an unscalable large characterization effort and database to store energy values for all possible variations in functionality, dimensions, and parallelism. Further, such an unscalable solution would be needed for every new design. For this reason, methodologies like accelergy overlook the impact of wires, thereby compromising accuracy.
+
+In contrast, a one-time characterization of a SiLago block in the context of its valid neighbors is sufficient for post-route accurate estimations for any algorithm mapping. 
+The one-time process is hidden from the end user, who only uses the database of characterised components. 
+%to calculate the energy consumption of a new design. 
+This is similar to a one-time characterization of standard cells; however, standard-cell characterization does not include characterization of the wires connecting them, whereas our methodology inherently accounts for the impact of wires. 
+%The resulting database can be applied universally to any algorithm, regardless of its dimensions or level of parallelism, while consistently providing accurate post-route energy estimates. 
+\begin{figure}[t]
+    \centering
+    \scriptsize
+    \includegraphics[scale=0.3]{figures/2_silago_platform_design.png}
+%\caption{\small Example floorplan of a \textit{synchoros} design composed by abutment consisting of three different functional regions.}
+\caption{\small Example floorplan of a synchoros design.
+Three CGRA functional regions are composed at the GDSII level by abutment of SiLago blocks on a virtual grid.}
+\vspace{-6mm}
+\label{fig:floorplan}
+\end{figure}
+% \begin{figure}[t]
+%     \centering
+%     \scriptsize
+%     \includesvg[scale=0.3]{figures/2_silago_platform_design.svg}
+% %\caption{\small Example floorplan of a \textit{synchoros} design composed by abutment consisting of three different functional regions.}
+% \caption{\small Example floorplan of a synchoros design.
+% Three CGRA functional regions are composed at the GDSII level by abutment of SiLago blocks on a virtual grid.}
+% \vspace{-6mm}
+% \label{fig:floorplan}
+% \end{figure}
