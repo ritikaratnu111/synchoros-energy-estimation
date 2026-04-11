@@ -1,6 +1,6 @@
 # synchoros-energy-estimation
 
-Artifact (paper + code + testcases) for **Synchoros** energy characterization/estimation of CGRA fabrics.
+Artifact for **Synchoros** energy characterization/estimation of CGRA fabrics.
 
 ## Overview
 
