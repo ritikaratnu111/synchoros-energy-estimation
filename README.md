@@ -1,10 +1,10 @@
 # synchoros-energy-estimation
 
-Artifacts (paper + code + testcases) for **Synchoros** energy characterization/estimation of CGRA fabrics, with state-of-the-art (SOTA) comparisons.
+Artifact (paper + code + testcases) for **Synchoros** energy characterization/estimation of CGRA fabrics.
 
 ## Overview
 
-- **`src/`**  : Python code for running characterization/estimation flows.
+- **`src/`**  : Python code for characterization/estimation flows.
 
 
 - **`tests/`**: Testcases for the following CGRAs 
@@ -17,7 +17,7 @@ Artifacts (paper + code + testcases) for **Synchoros** energy characterization/e
   - `accelergy/` : https://accelergy.mit.edu/paper.pdf
   - `cgra_eam/`  : https://research.tue.nl/en/publications/cgra-eam-rapid-energy-and-area-estimation-for-coarse-grained-reco/
 
-- **`paper/`**: LaTeX sources for the paper.
+- **`paper/`**: LaTeX source for paper.
 
 
 ## Quickstart
