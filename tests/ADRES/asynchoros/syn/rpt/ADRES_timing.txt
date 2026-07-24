@@ -8,7 +8,7 @@ Report : timing
         -max_paths 1
 Design : ADRES
 Version: T-2022.03-SP2
-Date   : Wed Jul 22 00:06:17 2026
+Date   : Fri Jul 24 02:17:14 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -16,78 +16,74 @@ Date   : Wed Jul 22 00:06:17 2026
 Operating Conditions: ssg0p81v125c   Library: tcbn28hpcbwp30p140ssg0p81v125c
 Wire Load Model Mode: segmented
 
-  Startpoint: mem_rr_ptr_q_reg[1][0]
-              (rising edge-triggered flip-flop)
-  Endpoint: array_idle_o
-            (output port)
-  Path Group: (none)
+  Startpoint: g_row[0].g_col[0].u_tile/u_reg_file/mem_reg[2][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: g_row[0].g_col[0].u_tile/u_reg_file/mem_reg[15][30]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
   Path Type: max
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
   output_register_DATA_W33_NUM_PORTS10_15
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_15
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_14
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_14
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_13
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_13
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_12
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_12
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_11
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_11
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_10
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_10
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_9
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_9
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_8
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_8
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_7
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_7
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_6
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_6
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_5
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_5
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_4
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_4
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_3
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_3
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_2
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_2
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   output_register_DATA_W33_NUM_PORTS10_1
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_15
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_14
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_13
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_12
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_11
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_10
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_9
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_8
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_7
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_6
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_5
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_4
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_3
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_2
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   reg_file_DATA_W33_DEPTH16_ADDR_W4_1
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  output_register_DATA_W33_NUM_PORTS10_0
-                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
-  reg_file_DATA_W33_DEPTH16_ADDR_W4_0
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   tile_15            ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   tile_14            ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
@@ -104,48 +100,141 @@ Wire Load Model Mode: segmented
   tile_3             ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   tile_2             ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   tile_1             ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_0
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_0
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   tile_0             ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   ADRES              ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
   global_controller_DEPTH256_ADDR_W8
                      ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  simple_alu_width32_0
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  simple_alu_width32_0_DW01_cmp6_0_DW01_cmp6_15
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  simple_alu_width32_0_DW01_add_0_DW01_add_31
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  simple_alu_width32_0_DW01_sub_0_DW01_sub_15
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  mem_rr_ptr_q_reg[1][0]/CP (DFCNQD1BWP30P140)            0.00 #     0.00 r
-  mem_rr_ptr_q_reg[1][0]/Q (DFCNQD1BWP30P140)             0.08       0.08 f
-  U16120/ZN (CKND0BWP30P140)                              0.03       0.11 r
-  U16115/ZN (NR2D0BWP30P140)                              0.02       0.13 f
-  U16114/ZN (NR2D0BWP30P140)                              0.05       0.18 r
-  U16113/ZN (MUX2ND0BWP30P140)                            0.04       0.22 r
-  U16106/ZN (CKND2D0BWP30P140)                            0.02       0.24 f
-  U16105/ZN (CKND0BWP30P140)                              0.02       0.26 r
-  U16100/ZN (AOI221D0BWP30P140)                           0.02       0.28 f
-  U16099/Z (AN3D0BWP30P140)                               0.04       0.32 f
-  U16098/ZN (NR2D0BWP30P140)                              0.03       0.35 r
-  U16096/Z (AN3D0BWP30P140)                               0.05       0.40 r
-  U16095/ZN (NR2D0BWP30P140)                              0.02       0.42 f
-  U16094/ZN (MUX2ND0BWP30P140)                            0.05       0.46 r
-  U16093/ZN (CKND0BWP30P140)                              0.03       0.50 f
-  U16089/ZN (NR2D0BWP30P140)                              0.09       0.59 r
-  U16088/ZN (CKND0BWP30P140)                              0.17       0.76 f
-  U16087/ZN (CKND2D0BWP30P140)                            0.08       0.84 r
-  U13516/ZN (OAI33D0BWP30P140)                            0.04       0.88 f
-  U13509/ZN (NR4D0BWP30P140)                              0.04       0.91 r
-  U13489/ZN (AOI31D0BWP30P140)                            0.04       0.95 f
-  u_context_controller/stall_i (global_controller_DEPTH256_ADDR_W8)
-                                                          0.00       0.95 f
-  u_context_controller/U3/ZN (INR3D1BWP30P140)            0.12       1.07 r
-  u_context_controller/execute_enable_o (global_controller_DEPTH256_ADDR_W8)
-                                                          0.00       1.07 r
-  U15885/ZN (NR4D0BWP30P140)                              0.04       1.11 f
-  U15884/ZN (ND4D0BWP30P140)                              0.03       1.14 r
-  U15883/ZN (NR4D0BWP30P140)                              0.02       1.16 f
-  U15870/ZN (ND4D0BWP30P140)                              0.02       1.18 r
-  U15869/ZN (NR3D0BWP30P140)                              0.02       1.20 f
-  array_idle_o (out)                                      0.00       1.20 f
-  data arrival time                                                  1.20
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  g_row[0].g_col[0].u_tile/u_reg_file/mem_reg[2][0]/CP (DFCNQD1BWP30P140)
+                                                          0.00 #     0.00 r
+  g_row[0].g_col[0].u_tile/u_reg_file/mem_reg[2][0]/Q (DFCNQD1BWP30P140)
+                                                          0.07       0.07 f
+  g_row[0].g_col[0].u_tile/u_reg_file/U1108/Z (AO22D0BWP30P140)
+                                                          0.04       0.12 f
+  g_row[0].g_col[0].u_tile/u_reg_file/U1109/ZN (AOI221D0BWP30P140)
+                                                          0.04       0.16 r
+  g_row[0].g_col[0].u_tile/u_reg_file/U1110/ZN (ND4D0BWP30P140)
+                                                          0.04       0.20 f
+  g_row[0].g_col[0].u_tile/u_reg_file/lhs_read_data_o[0] (reg_file_DATA_W33_DEPTH16_ADDR_W4_0)
+                                                          0.00       0.20 f
+  g_row[0].g_col[0].u_tile/U453/ZN (AOI221D1BWP30P140)
+                                                          0.05       0.25 r
+  g_row[0].g_col[0].u_tile/U447/ZN (ND4D1BWP30P140)       0.05       0.30 f
+  g_row[0].g_col[0].u_tile/u_alu/op_LHS[0] (simple_alu_width32_0)
+                                                          0.00       0.30 f
+  g_row[0].g_col[0].u_tile/u_alu/U681/ZN (AOI22D1BWP30P140)
+                                                          0.08       0.38 r
+  g_row[0].g_col[0].u_tile/u_alu/U7/ZN (INVD1BWP30P140)
+                                                          0.21       0.59 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/B[0] (simple_alu_width32_0_DW01_add_0_DW01_add_31)
+                                                          0.00       0.59 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1/Z (AN2D1BWP30P140)
+                                                          0.08       0.68 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_1/CO (FA1D1BWP30P140)
+                                                          0.05       0.73 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_2/CO (FA1D1BWP30P140)
+                                                          0.05       0.78 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_3/CO (FA1D1BWP30P140)
+                                                          0.05       0.83 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_4/CO (FA1D1BWP30P140)
+                                                          0.05       0.88 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_5/CO (FA1D1BWP30P140)
+                                                          0.05       0.93 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_6/CO (FA1D1BWP30P140)
+                                                          0.05       0.98 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_7/CO (FA1D1BWP30P140)
+                                                          0.05       1.03 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_8/CO (FA1D1BWP30P140)
+                                                          0.05       1.08 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_9/CO (FA1D1BWP30P140)
+                                                          0.05       1.13 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_10/CO (FA1D1BWP30P140)
+                                                          0.05       1.18 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_11/CO (FA1D1BWP30P140)
+                                                          0.05       1.23 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_12/CO (FA1D1BWP30P140)
+                                                          0.05       1.28 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_13/CO (FA1D1BWP30P140)
+                                                          0.05       1.32 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_14/CO (FA1D1BWP30P140)
+                                                          0.05       1.37 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_15/CO (FA1D1BWP30P140)
+                                                          0.05       1.42 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_16/CO (FA1D1BWP30P140)
+                                                          0.05       1.47 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_17/CO (FA1D1BWP30P140)
+                                                          0.05       1.52 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_18/CO (FA1D1BWP30P140)
+                                                          0.05       1.57 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_19/CO (FA1D1BWP30P140)
+                                                          0.05       1.62 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_20/CO (FA1D1BWP30P140)
+                                                          0.05       1.67 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_21/CO (FA1D1BWP30P140)
+                                                          0.05       1.72 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_22/CO (FA1D1BWP30P140)
+                                                          0.05       1.77 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_23/CO (FA1D1BWP30P140)
+                                                          0.05       1.82 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_24/CO (FA1D1BWP30P140)
+                                                          0.05       1.87 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_25/CO (FA1D1BWP30P140)
+                                                          0.05       1.92 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_26/CO (FA1D1BWP30P140)
+                                                          0.05       1.97 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_27/CO (FA1D1BWP30P140)
+                                                          0.05       2.02 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_28/CO (FA1D1BWP30P140)
+                                                          0.05       2.06 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_29/CO (FA1D1BWP30P140)
+                                                          0.05       2.11 f
+  g_row[0].g_col[0].u_tile/u_alu/add_27/U1_30/S (FA1D1BWP30P140)
+                                                          0.08       2.20 r
+  g_row[0].g_col[0].u_tile/u_alu/add_27/SUM[30] (simple_alu_width32_0_DW01_add_0_DW01_add_31)
+                                                          0.00       2.20 r
+  g_row[0].g_col[0].u_tile/u_alu/U286/ZN (AOI22D1BWP30P140)
+                                                          0.02       2.22 f
+  g_row[0].g_col[0].u_tile/u_alu/U682/ZN (ND4D1BWP30P140)
+                                                          0.03       2.25 r
+  g_row[0].g_col[0].u_tile/u_alu/result[30] (simple_alu_width32_0)
+                                                          0.00       2.25 r
+  g_row[0].g_col[0].u_tile/u_reg_file/write_data_i[30] (reg_file_DATA_W33_DEPTH16_ADDR_W4_0)
+                                                          0.00       2.25 r
+  g_row[0].g_col[0].u_tile/u_reg_file/U87/ZN (INVD1BWP30P140)
+                                                          0.04       2.29 f
+  g_row[0].g_col[0].u_tile/u_reg_file/U271/ZN (MOAI22D1BWP30P140)
+                                                          0.03       2.32 r
+  g_row[0].g_col[0].u_tile/u_reg_file/mem_reg[15][30]/D (DFCNQD1BWP30P140)
+                                                          0.00       2.32 r
+  data arrival time                                                  2.32
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  g_row[0].g_col[0].u_tile/u_reg_file/mem_reg[15][30]/CP (DFCNQD1BWP30P140)
+                                                          0.00      10.00 r
+  library setup time                                     -0.04       9.96
+  data required time                                                 9.96
   --------------------------------------------------------------------------
-  (Path is unconstrained)
+  data required time                                                 9.96
+  data arrival time                                                 -2.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        7.64
 
 
 1

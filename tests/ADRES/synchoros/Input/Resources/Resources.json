@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "config_mem",
+        "Description": "Per-context tile configuration memory",
+        "NetlistString": [
+            "config_mem"
+        ]
+    },
+    {
+        "Name": "reg_file",
+        "Description": "Local three-read-port, one-write-port register file",
+        "NetlistString": [
+            "reg_file"
+        ]
+    },
+    {
+        "Name": "simple_alu",
+        "Description": "Combinational arithmetic, logic, shift, comparison, selection and move unit",
+        "NetlistString": [
+            "simple_alu"
+        ]
+    },
+    {
+        "Name": "output_register",
+        "Description": "Registered tile result and output-route enable mask",
+        "NetlistString": [
+            "output_register"
+        ]
+    },
+    {
+        "Name": "local_noc_adapter",
+        "Description": "Local network adapter that maps row, column and memory inputs to tile ports",
+        "NetlistString": [
+            "local_noc_adapter"
+        ]
+    }
+]

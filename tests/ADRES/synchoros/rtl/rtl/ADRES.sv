@@ -55,7 +55,7 @@ module ADRES #(
 
   adres_control_status #(
     .ROWS (4)
-  ) u_control_status (
+  ) adres_control_status (
     .clk_i                (clk_i),
     .rst_ni               (rst_ni),
     .run_i                (run_i),
@@ -76,7 +76,7 @@ module ADRES #(
     .ROWS             (4),
     .COLS             (4),
     .FORCE_LINK_VALID (FORCE_LINK_VALID)
-  ) u_tile_array (
+  ) adres_tile_array (
     .clk_i               (clk_i),
     .rst_ni              (rst_ni),
     .context_addr_i      (context_addr_o),
@@ -97,7 +97,7 @@ module ADRES #(
   adres_endpoints #(
     .ROWS (4),
     .COLS (4)
-  ) u_endpoints (
+  ) adres_endpoints (
     .clk_i                (clk_i),
     .rst_ni               (rst_ni),
     .execute_enable_i     (execute_enable_o),
@@ -121,7 +121,7 @@ module ADRES #(
     .COLS                (4),
     .DMEM_WORDS_PER_BANK (DMEM_WORDS_PER_BANK),
     .DMEM_ADDR_W         (DMEM_ADDR_W)
-  ) u_memory_subsystem (
+  ) adres_memory_subsystem (
     .clk_i                 (clk_i),
     .rst_ni                (rst_ni),
     .run_i                 (run_i),
@@ -145,7 +145,7 @@ module ADRES #(
   adres_checks #(
     .DMEM_WORDS_PER_BANK (DMEM_WORDS_PER_BANK),
     .DMEM_ADDR_W         (DMEM_ADDR_W)
-  ) u_checks (
+  ) adres_checks (
     .clk_i                (clk_i),
     .rst_ni               (rst_ni),
     .run_i                (run_i),

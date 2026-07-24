@@ -1,0 +1,30 @@
+{
+"Name":             "SiLagoBlock",
+"ValidNeighborConfigurations":[
+                {
+                "Id":           "Tile",
+                "Description":  "Reference component with up to four orthogonal neighbors",
+                "Neighbours":   [
+                                {
+                                "Name":     "SiLagoBlock",
+                                "Alignment":"North"
+                                },
+                                {
+                                "Name":     "SiLagoBlock",
+                                "Alignment":"South"
+                                },
+                                {
+                                "Name":     "SiLagoBlock",
+                                "Alignment":"East"
+                                },
+                                {
+                                "Name":     "SiLagoBlock",
+                                "Alignment":"West"
+                                }
+                                ], 
+                "Operations":   "Operations/Operations.json"
+                }
+                ],
+"Resources":        "Resources/Resources.json", 
+"DesignBasePath":   "~/Documents/synchoros-energy-estimation/tests/ADRES/synchoros/Input"
+}

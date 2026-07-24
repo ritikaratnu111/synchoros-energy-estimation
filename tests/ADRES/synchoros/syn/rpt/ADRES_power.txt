@@ -9,7 +9,7 @@ Report : power
         -analysis_effort low
 Design : ADRES
 Version: T-2022.03-SP2
-Date   : Fri Jul 24 02:17:24 2026
+Date   : Fri Jul 24 03:04:52 2026
 ****************************************
 
 
@@ -24,29 +24,84 @@ Wire Load Model Mode: segmented
 Design        Wire Load Model            Library
 ------------------------------------------------
 ADRES                  ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_control_status_ROWS4
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_array_4_4_1 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_endpoints_ROWS4_COLS4
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_memory_subsystem_ROWS4_COLS4_DMEM_WORDS_PER_BANK256_DMEM_ADDR_W8
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
 global_controller_DEPTH256_ADDR_W8
                        ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_0                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_0_0_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_0_1_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_0_2_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_0_3_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_1_0_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_1_1_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_1_2_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_1_3_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_2_0_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_2_1_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_2_2_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_2_3_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_3_0_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_3_1_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_3_2_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+adres_tile_3_3_4_4_1   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_0_0_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_0            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_0_1_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_0_2_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_0_3_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_1_0_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_1_1_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_1_2_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_1_3_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_2_0_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_2_1_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_2_2_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_2_3_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_3_0_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_3_1_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_3_2_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+local_noc_adapter_3_3_4_4_1
+                       ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
 reg_file_DATA_W33_DEPTH16_ADDR_W4_0
                        ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
 simple_alu_width32_0   ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
 output_register_DATA_W33_NUM_PORTS10_0
                        ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_1                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_2                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_3                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_4                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_5                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_6                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_7                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_8                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_9                 ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_10                ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_11                ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_12                ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_13                ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_14                ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
-tile_15                ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_1            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_2            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_3            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_4            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_5            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_6            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_7            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_8            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_9            ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_10           ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_11           ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_12           ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_13           ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_14           ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
+tile_core_15           ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
 reg_file_DATA_W33_DEPTH16_ADDR_W4_1
                        ZeroWireload      tcbn28hpcbwp30p140ssg0p81v125c
 reg_file_DATA_W33_DEPTH16_ADDR_W4_2
@@ -236,12 +291,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   3.2569 mW   (95%)
-  Net Switching Power  = 187.8334 uW    (5%)
+  Cell Internal Power  =   3.2714 mW   (94%)
+  Net Switching Power  = 201.9930 uW    (6%)
                          ---------
-Total Dynamic Power    =   3.4448 mW  (100%)
+Total Dynamic Power    =   3.4734 mW  (100%)
 
-Cell Leakage Power     =   2.7492 mW
+Cell Leakage Power     =   2.8905 mW
 
 
                  Internal         Switching           Leakage            Total
@@ -249,11 +304,11 @@ Power Group      Power            Power               Power              Power  
 --------------------------------------------------------------------------------------------------
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
-black_box          0.0000        7.3519e-03            0.0000        7.3519e-03  (   0.12%)
-clock_network      3.2392            0.1422        1.6387e+06            1.9565  (  31.59%)  i
-register       6.9499e-03        6.7639e-04        9.6001e+05            4.0312  (  65.08%)
+black_box          0.0000        8.0393e-03            0.0000        8.0393e-03  (   0.13%)
+clock_network      3.2492            0.1464        1.6622e+06            1.9901  (  31.27%)  i
+register       6.5813e-03        1.4102e-03        9.6163e+05            4.0373  (  63.44%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  1.0719e-02        3.7617e-02        1.5057e+05            0.1989  (   3.21%)
+combinational  1.5574e-02        4.6181e-02        2.6668e+05            0.3284  (   5.16%)
 --------------------------------------------------------------------------------------------------
-Total              3.2569 mW         0.1878 mW     2.7492e+06 nW         6.1940 mW
+Total              3.2714 mW         0.2020 mW     2.8905e+06 nW         6.3639 mW
 1

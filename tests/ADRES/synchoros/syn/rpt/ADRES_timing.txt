@@ -1,0 +1,282 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'ADRES' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : ADRES
+Version: T-2022.03-SP2
+Date   : Fri Jul 24 03:04:42 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcbwp30p140ssg0p81v125c
+Wire Load Model Mode: segmented
+
+  Startpoint: adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/mem_reg[2][0]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/mem_reg[8][30]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  output_register_DATA_W33_NUM_PORTS10_15
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_14
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_13
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_12
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_11
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_10
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_9
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_8
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_7
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_6
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_5
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_4
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_3
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_2
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_15
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_14
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_13
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_12
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_11
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_10
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_9
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_8
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_7
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_6
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_5
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_4
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_3
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_2
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_15       ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_14       ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_13       ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_12       ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_11       ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_10       ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_9        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_8        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_7        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_6        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_5        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_4        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_3        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_2        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_1        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  output_register_DATA_W33_NUM_PORTS10_0
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  reg_file_DATA_W33_DEPTH16_ADDR_W4_0
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  tile_core_0        ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_3_3_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_3_2_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_3_1_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_3_0_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_2_3_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_2_2_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_2_1_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_2_0_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_1_3_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_1_2_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_1_1_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_1_0_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_0_3_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_0_2_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_0_1_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_0_0_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  global_controller_DEPTH256_ADDR_W8
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_memory_subsystem_ROWS4_COLS4_DMEM_WORDS_PER_BANK256_DMEM_ADDR_W8
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_endpoints_ROWS4_COLS4
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_tile_array_4_4_1
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  ADRES              ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  adres_control_status_ROWS4
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  simple_alu_width32_3
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  simple_alu_width32_3_DW01_cmp6_0_DW01_cmp6_2
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  simple_alu_width32_3_DW01_add_0_DW01_add_18
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+  simple_alu_width32_3_DW01_sub_0_DW01_sub_2
+                     ZeroWireload          tcbn28hpcbwp30p140ssg0p81v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/mem_reg[2][0]/CP (DFCNQD1BWP30P140)
+                                                          0.00 #     0.00 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/mem_reg[2][0]/Q (DFCNQD1BWP30P140)
+                                                          0.07       0.07 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/U1108/Z (AO22D0BWP30P140)
+                                                          0.04       0.12 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/U1109/ZN (AOI221D0BWP30P140)
+                                                          0.04       0.16 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/U1110/ZN (ND4D0BWP30P140)
+                                                          0.04       0.20 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/lhs_read_data_o[0] (reg_file_DATA_W33_DEPTH16_ADDR_W4_3)
+                                                          0.00       0.20 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/U460/ZN (AOI221D1BWP30P140)
+                                                          0.05       0.25 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/U454/ZN (ND4D1BWP30P140)
+                                                          0.05       0.30 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/op_LHS[0] (simple_alu_width32_3)
+                                                          0.00       0.30 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/U682/ZN (AOI22D1BWP30P140)
+                                                          0.08       0.38 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/U7/ZN (INVD1BWP30P140)
+                                                          0.21       0.59 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/B[0] (simple_alu_width32_3_DW01_add_0_DW01_add_18)
+                                                          0.00       0.59 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1/Z (AN2D1BWP30P140)
+                                                          0.08       0.68 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_1/CO (FA1D1BWP30P140)
+                                                          0.05       0.73 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_2/CO (FA1D1BWP30P140)
+                                                          0.05       0.78 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_3/CO (FA1D1BWP30P140)
+                                                          0.05       0.83 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_4/CO (FA1D1BWP30P140)
+                                                          0.05       0.88 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_5/CO (FA1D1BWP30P140)
+                                                          0.05       0.93 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_6/CO (FA1D1BWP30P140)
+                                                          0.05       0.98 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_7/CO (FA1D1BWP30P140)
+                                                          0.05       1.03 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_8/CO (FA1D1BWP30P140)
+                                                          0.05       1.08 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_9/CO (FA1D1BWP30P140)
+                                                          0.05       1.13 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_10/CO (FA1D1BWP30P140)
+                                                          0.05       1.18 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_11/CO (FA1D1BWP30P140)
+                                                          0.05       1.23 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_12/CO (FA1D1BWP30P140)
+                                                          0.05       1.28 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_13/CO (FA1D1BWP30P140)
+                                                          0.05       1.32 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_14/CO (FA1D1BWP30P140)
+                                                          0.05       1.37 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_15/CO (FA1D1BWP30P140)
+                                                          0.05       1.42 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_16/CO (FA1D1BWP30P140)
+                                                          0.05       1.47 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_17/CO (FA1D1BWP30P140)
+                                                          0.05       1.52 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_18/CO (FA1D1BWP30P140)
+                                                          0.05       1.57 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_19/CO (FA1D1BWP30P140)
+                                                          0.05       1.62 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_20/CO (FA1D1BWP30P140)
+                                                          0.05       1.67 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_21/CO (FA1D1BWP30P140)
+                                                          0.05       1.72 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_22/CO (FA1D1BWP30P140)
+                                                          0.05       1.77 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_23/CO (FA1D1BWP30P140)
+                                                          0.05       1.82 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_24/CO (FA1D1BWP30P140)
+                                                          0.05       1.87 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_25/CO (FA1D1BWP30P140)
+                                                          0.05       1.92 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_26/CO (FA1D1BWP30P140)
+                                                          0.05       1.97 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_27/CO (FA1D1BWP30P140)
+                                                          0.05       2.02 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_28/CO (FA1D1BWP30P140)
+                                                          0.05       2.06 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_29/CO (FA1D1BWP30P140)
+                                                          0.05       2.11 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/U1_30/S (FA1D1BWP30P140)
+                                                          0.08       2.20 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/add_27/SUM[30] (simple_alu_width32_3_DW01_add_0_DW01_add_18)
+                                                          0.00       2.20 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/U286/ZN (AOI22D1BWP30P140)
+                                                          0.02       2.22 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/U683/ZN (ND4D1BWP30P140)
+                                                          0.03       2.25 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_alu/result[30] (simple_alu_width32_3)
+                                                          0.00       2.25 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/write_data_i[30] (reg_file_DATA_W33_DEPTH16_ADDR_W4_3)
+                                                          0.00       2.25 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/U89/ZN (INVD1BWP30P140)
+                                                          0.04       2.29 f
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/U262/ZN (MOAI22D1BWP30P140)
+                                                          0.03       2.32 r
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/mem_reg[8][30]/D (DFCNQD1BWP30P140)
+                                                          0.00       2.32 r
+  data arrival time                                                  2.32
+
+  clock clk_i (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.20       9.80
+  adres_tile_array/g_row[3].g_col[1].u_adres_tile/u_tile_core/u_reg_file/mem_reg[8][30]/CP (DFCNQD1BWP30P140)
+                                                          0.00       9.80 r
+  library setup time                                     -0.04       9.76
+  data required time                                                 9.76
+  --------------------------------------------------------------------------
+  data required time                                                 9.76
+  data arrival time                                                 -2.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        7.44
+
+
+1
